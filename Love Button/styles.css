@@ -13,18 +13,42 @@ body {
 }
 
 body {
-    background-color: #212121;
+    /* background-color: #dbeafe; */
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
     display: flex;
     justify-content: center;
+    /* Center Horizontally */
     text-align: center;
+    align-items: center;
+    /* Center Vertically  */
+    height: 100%
 }
 
 #container {
     height: 400px;
-    width: 300px;
+    width: 350px;
+    font-size: 150%;
     background-color: white;
+    position: relative;
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    overflow: hidden;
+}
+
+#container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#container i {
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    /* Moves it back by 50% of its own size */
+    opacity: 0;
+    transition: transform ease 0.5s;
 }
